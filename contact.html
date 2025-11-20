@@ -2,11 +2,14 @@
 <html lang="fr">
 <head>
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Contact — RAIZEL TECH</title>
+
 <link rel="stylesheet" href="assets/css/main.css">
 </head>
+
 <body>
+
 <header class="site-header">
   <div class="container header-inner">
     <a class="logo" href="index.html">RAIZEL<span>TECH</span></a>
@@ -15,59 +18,61 @@
       <a href="services.html">Services</a>
       <a href="formations.html">Formations</a>
       <a href="projets.html">Projets</a>
+      <a href="bots.html">Bots</a>
       <a href="contact.html" class="active btn-contact">Contact</a>
     </nav>
   </div>
 </header>
 
 <main class="container main-content">
-  <h1>Contactez-nous</h1>
 
-  <div class="contact-grid">
-    <section class="contact-card">
-      <h3>Contact direct</h3>
-      <p><strong>DEV RAIZEL</strong></p>
-      <p>WhatsApp : <a href="tel:+237679064679">+237 6 79 06 46 79</a></p>
-      <p>Telegram : <a href="https://t.me/DevRaizel" target="_blank">@DevRaizel</a></p>
-    </section>
+  <h1 class="page-title">📞 Contact & Assistance</h1>
 
-    <section class="contact-form">
-      <h3>Envoyer un message</h3>
-      <form id="contactForm">
-        <label>Nom</label>
-        <input type="text" name="name" required>
-        <label>Email</label>
-        <input type="email" name="email" required>
-        <label>Message</label>
-        <textarea name="message" rows="6" required></textarea>
-        <button class="cta" type="submit">Envoyer</button>
-      </form>
-      <p class="muted">Nous répondons généralement sous 24h via WhatsApp / Telegram.</p>
-    </section>
-  </div>
+  <p class="intro">
+    Vous avez un projet, une question ou vous souhaitez passer une commande ?  
+    Notre équipe est disponible 7j/7 pour vous assister.
+  </p>
+
+  <section class="contact-section">
+
+    <div class="contact-card">
+      <h2>💬 WhatsApp Direct</h2>
+      <p>Contactez-nous instantanément via WhatsApp.</p>
+
+      <a href="https://wa.me/679064679?text=Bonjour%20👋,%20j’aimerais%20obtenir%20des%20informations.%20"
+         class="btn-whatsapp">Envoyer un message</a>
+    </div>
+
+    <div class="contact-card">
+      <h2>📨 Telegram</h2>
+      <p>Disponible également sur Telegram pour les commandes & projets.</p>
+
+      <a href="https://t.me/DevRaizel" class="btn-telegram">Ouvrir Telegram</a>
+    </div>
+
+  </section>
+
+
+  <!-- FORMULAIRE OPTIONNEL -->
+  <section class="form-section">
+    <h2>📧 Envoyer un message</h2>
+
+    <form class="contact-form" onsubmit="alert('Message envoyé ! (Démo)'); return false;">
+      
+      <label>Nom</label>
+      <input type="text" placeholder="Votre nom" required>
+
+      <label>Email</label>
+      <input type="email" placeholder="Votre email" required>
+
+      <label>Message</label>
+      <textarea placeholder="Dites-nous en plus..." required></textarea>
+
+      <button type="submit" class="btn-main">Envoyer</button>
+    </form>
+  </section>
+
 </main>
-
-<footer class="site-footer">
-  <div class="container footer-inner">
-    <div>
-      <a class="logo" href="index.html">RAIZEL<span>TECH</span></a>
-      <p class="muted">Innovation • Automatisation • Intelligence</p>
-    </div>
-
-    <div class="footer-contacts">
-      <p><strong>DEV RAIZEL</strong></p>
-      <p>WhatsApp : <a href="tel:+237679064679">+237 6 79 06 46 79</a></p>
-      <p>Telegram : <a href="https://t.me/DevRaizel" target="_blank">@DevRaizel</a></p>
-    </div>
-  </div>
-</footer>
-
-<script>
-document.getElementById('contactForm').addEventListener('submit', function(e){
-  e.preventDefault();
-  alert('Merci — votre message a été envoyé (simulation). Contactez via WhatsApp pour une réponse réelle.');
-});
-</script>
 
 </body>
 </html>
