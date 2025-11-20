@@ -1,18 +1,58 @@
 <!doctype html>
 <html lang="fr">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <title>Projets — RAIZEL TECH</title>
 
 <link rel="stylesheet" href="assets/css/main.css">
+<script src="assets/js/app.js" defer></script>
+
+<style>
+.icon-whatsapp {
+  width: 26px;
+  height: 26px;
+  background-image: url('https://files.catbox.moe/vu3zd2.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+.project-card {
+  padding: 25px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(0,255,122,0.15);
+  backdrop-filter: blur(8px) saturate(130%);
+  box-shadow: 0 8px 30px rgba(0,255,122,0.05), 0 8px 25px rgba(0,0,0,0.4);
+  transition: transform .2s, box-shadow .2s;
+}
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 40px rgba(0,255,122,0.12);
+}
+.project-tag {
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 11px;
+  color: #00ff7a;
+  border: 1px solid rgba(0,255,122,0.25);
+  border-radius: 6px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+</style>
 </head>
 
 <body>
 
+<canvas id="particles"></canvas>
+
 <header class="site-header">
   <div class="container header-inner">
     <a class="logo" href="index.html">RAIZEL<span>TECH</span></a>
+
     <nav class="nav">
       <a href="index.html">Accueil</a>
       <a href="services.html">Services</a>
@@ -24,68 +64,83 @@
   </div>
 </header>
 
-<main class="container main-content">
+<section class="container hero small-hero">
+  <h1>📂 Nos Réalisations et Projets</h1>
+  <p>Bots, applications, sites web et solutions IA développées pour nos clients.</p>
+</section>
 
-  <h1 class="page-title">📁 Nos Projets Réalisés</h1>
+<section class="container">
 
-  <p class="intro">
-    Voici quelques réalisations de RAIZEL TECH : bots intelligents, sites web, applications 
-    et solutions professionnelles développées pour nos clients.
-  </p>
+  <div class="services-grid">
 
-  <section class="projects-grid">
-
-    <!-- PROJET 1 -->
+    <!-- PROJECT 1 -->
     <div class="project-card">
-      <h3>🤖 Bot WhatsApp IA</h3>
+      <span class="project-tag">BOT WHATSAPP</span>
+      <h3>🤖 Bot WhatsApp IA – XMD</h3>
       <p>
-        Bot intelligent avec menus avancés, IA intégrée, gestion client et automatisations.
+        Bot polyvalent avec IA intégrée, commandes avancées, menus interactifs, CRM 
+        et automatisation de réponses.  
+        Développé pour entreprises locales et e-commerce.
       </p>
-      <p class="price">À partir de 75 000 XAF</p>
-
-      <a href="https://wa.me/679064679?text=Bonjour,%20je%20souhaite%20en%20savoir%20plus%20sur%20le%20Bot%20WhatsApp%20IA."
-         class="btn-order">Commander ou Voir Démo</a>
+      <a class="btn" href="https://wa.me/679064679?text=Je%20veux%20un%20bot%20WhatsApp%20comme%20ce%20projet.">
+        <span class="icon-whatsapp"></span> Commander un bot similaire
+      </a>
     </div>
 
-    <!-- PROJET 2 -->
+    <!-- PROJECT 2 -->
     <div class="project-card">
-      <h3>🌐 Site Web Professionnel</h3>
+      <span class="project-tag">SITE WEB / E-COMMERCE</span>
+      <h3>🛍️ Site E-commerce Professionnel</h3>
       <p>
-        Site vitrine moderne, responsive et optimisé pour votre activité.
+        Catalogue produits, paiement mobile, gestion stock, tableau admin.  
+        Optimisation SEO + design moderne adapté à la marque.
       </p>
-      <p class="price">À partir de 50 000 XAF</p>
-
-      <a href="https://wa.me/679064679?text=Bonjour,%20je%20souhaite%20voir%20vos%20d%C3%A9mos%20de%20sites%20web%20et%20commandes."
-         class="btn-order">Voir Démo / Commander</a>
+      <a class="btn" href="https://wa.me/679064679?text=Je%20veux%20un%20site%20ecommerce%20comme%20ce%20projet.">
+        <span class="icon-whatsapp"></span> Commander un site
+      </a>
     </div>
 
-    <!-- PROJET 3 -->
+    <!-- PROJECT 3 -->
     <div class="project-card">
-      <h3>📱 Application Mobile</h3>
+      <span class="project-tag">APPLICATION MOBILE</span>
+      <h3>📱 Application Android – Gestion Clients</h3>
       <p>
-        Application Android & iOS (Flutter), interface moderne, fonctionnalités puissantes.
+        Application Android complète : tableau de bord, gestion de clients, factures, 
+        synchronisation cloud et notifications.
       </p>
-      <p class="price">À partir de 120 000 XAF</p>
-
-      <a href="https://wa.me/679064679?text=Bonjour,%20je%20souhaite%20une%20application%20mobile%20sur%20mesure."
-         class="btn-order">Demander un devis</a>
+      <a class="btn" href="https://wa.me/679064679?text=Je%20veux%20une%20application%20comme%20ce%20projet.">
+        <span class="icon-whatsapp"></span> Commander une application
+      </a>
     </div>
 
-    <!-- PROJET 4 -->
+    <!-- PROJECT 4 -->
     <div class="project-card">
-      <h3>🎨 Identité Visuelle & Logo</h3>
+      <span class="project-tag">BOT TELEGRAM</span>
+      <h3>🧠 Bot Telegram IA – Automatisation Business</h3>
       <p>
-        Création de logos professionnels, chartes graphiques et design UI/UX.
+        Menus inline, intelligence artificielle, gestion des utilisateurs, 
+        automatisation des tâches internes et support client instantané.
       </p>
-      <p class="price">À partir de 20 000 XAF</p>
-
-      <a href="https://wa.me/679064679?text=Bonjour,%20je%20souhaite%20cr%C3%A9er%20un%20logo%20ou%20identit%C3%A9%20visuelle."
-         class="btn-order">Commander un design</a>
+      <a class="btn" href="https://wa.me/679064679?text=Je%20veux%20un%20bot%20Telegram%20comme%20ce%20projet.">
+        <span class="icon-whatsapp"></span> Commander
+      </a>
     </div>
 
-  </section>
+    <!-- PROJECT 5 -->
+    <div class="project-card">
+      <span class="project-tag">PANEL ADMIN</span>
+      <h3>🖥️ Dashboard – Administration & Statistiques</h3>
+      <p>
+        Interface web sécurisée, analytics, export rapports, gestion utilisateurs.  
+        Utilisé par plusieurs PME pour des données internes.
+      </p>
+      <a class="btn" href="https://wa.me/679064679?text=Je%20veux%20un%20dashboard%20comme%20ce%20projet.">
+        <span class="icon-whatsapp"></span> Commander
+      </a>
+    </div>
 
-</main>
+  </div>
+</section>
 
 </body>
 </html>
