@@ -7,17 +7,40 @@
 
 <link rel="stylesheet" href="assets/css/main.css">
 
+<!-- Particles.js -->
+<script src="assets/js/app.js" defer></script>
+
+<style>
+/* Icônes intégrées directement */
+.icon-whatsapp {
+  width: 28px;
+  height: 28px;
+  background-image: url('https://files.catbox.moe/vu3zd2.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+.icon-telegram {
+  width: 28px;
+  height: 28px;
+  background-image: url('https://files.catbox.moe/2zja9w.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+</style>
+
 </head>
 
 <body>
 
-<!-- PARTICLES -->
+<!-- ANIMATION FULL PAGE -->
 <canvas id="particles"></canvas>
 
 <header class="site-header">
   <div class="container header-inner">
     <a class="logo" href="index.html">RAIZEL<span>TECH</span></a>
-
     <nav class="nav">
       <a href="index.html" class="active">Accueil</a>
       <a href="services.html">Services</a>
@@ -30,36 +53,22 @@
 </header>
 
 
+<!-- HERO -->
 <section class="hero container">
-
   <h1>🚀 Votre équipe de devs devient aussi votre équipe de formation !</h1>
-
   <p>
-    Le monde du développement évolue à une vitesse fulgurante.  
-    RAIZEL TECH vous accompagne avec des solutions modernes :
-    bots IA, sites web, applications, design, formations et plus encore.
+    Rester à la pointe est un défi.  
+    RAIZEL TECH vous propose des solutions modernes : bots IA, sites web, applications, design, formations et plus encore.
   </p>
-
-  <!-- Ligne verticale animée -->
-  <div class="vertical-line"></div>
 
   <div class="hero-buttons">
     <a href="services.html" class="btn-main">Voir les services</a>
-
-    <a href="https://wa.me/679064679" class="btn-whatsapp">
-      <img src="https://files.catbox.moe/vu3zd2.png" alt="WhatsApp">
-      WhatsApp Direct
-    </a>
-
-    <a href="https://t.me/DevRaizel" class="btn-telegram">
-      <img src="https://files.catbox.moe/2zja9w.png" alt="Telegram">
-      Telegram
-    </a>
+    <a href="https://wa.me/679064679" class="btn-whatsapp"><span class="icon-whatsapp"></span> WhatsApp Direct</a>
   </div>
-
 </section>
 
 
+<!-- CATÉGORIES PRINCIPALES -->
 <section class="container categories">
 
   <h2>Nos domaines</h2>
@@ -67,18 +76,27 @@
   <div class="categories-grid">
 
     <a href="services.html" class="category-card">
-      <h3>🛒 Services & Produits</h3>
-      <p>Sites web – Apps – Design – VPS – Numéros virtuels</p>
+      <h3>🛠️ Création Web</h3>
+      <p>Sites vitrines, e-commerce, dashboards sécurisés.</p>
+      <span class="see">Voir</span>
     </a>
 
     <a href="bots.html" class="category-card">
       <h3>🤖 Bots Intelligents</h3>
-      <p>WhatsApp, Telegram, IA, automatisations avancées</p>
+      <p>Bots WhatsApp MD/XMD, Telegram, IA, automatisations.</p>
+      <span class="see">Voir</span>
     </a>
 
     <a href="formations.html" class="category-card">
       <h3>🎓 Formations</h3>
-      <p>Bureautique, Développement, Bots IA</p>
+      <p>Développement, bureautique, bots IA.</p>
+      <span class="see">Voir</span>
+    </a>
+
+    <a href="projets.html" class="category-card">
+      <h3>🎨 Design & UI/UX</h3>
+      <p>Charte graphique, logos, interfaces modernes.</p>
+      <span class="see">Voir</span>
     </a>
 
   </div>
@@ -86,28 +104,16 @@
 </section>
 
 
+<!-- CONTACT RAPIDE -->
 <section class="container contact-shortcut">
-
   <h2>Contact rapide</h2>
 
   <div class="contact-buttons">
-
-    <a class="btn-whatsapp" href="https://wa.me/679064679">
-      <img src="https://files.catbox.moe/vu3zd2.png" alt="WhatsApp">
-      WhatsApp
-    </a>
-
-    <a class="btn-telegram" href="https://t.me/DevRaizel">
-      <img src="https://files.catbox.moe/2zja9w.png" alt="Telegram">
-      Telegram
-    </a>
-
+    <a class="btn-whatsapp" href="https://wa.me/679064679"><span class="icon-whatsapp"></span> WhatsApp</a>
+    <a class="btn-telegram" href="https://t.me/DevRaizel"><span class="icon-telegram"></span> Telegram</a>
   </div>
-
 </section>
 
-
-<script src="assets/js/app.js"></script>
 
 </body>
 </html>
