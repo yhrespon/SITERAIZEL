@@ -1,18 +1,87 @@
 <!doctype html>
 <html lang="fr">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <title>Contact — RAIZEL TECH</title>
 
 <link rel="stylesheet" href="assets/css/main.css">
+<script src="assets/js/app.js" defer></script>
+
+<style>
+.icon-whatsapp {
+  width: 28px;
+  height: 28px;
+  background-image: url('https://files.catbox.moe/vu3zd2.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.icon-telegram {
+  width: 28px;
+  height: 28px;
+  background-image: url('https://files.catbox.moe/2zja9w.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.contact-card {
+  padding: 30px;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(0,255,122,0.18);
+  backdrop-filter: blur(10px) saturate(140%);
+  box-shadow: 0 10px 35px rgba(0,255,122,0.06), 0 10px 35px rgba(0,0,0,0.55);
+  text-align: center;
+}
+
+.contact-card h2 {
+  color: #00ff7a;
+  text-shadow: 0 0 12px rgba(0,255,122,0.35);
+}
+
+.contact-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.contact-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 14px 18px;
+  border-radius: 10px;
+  border: 1px solid rgba(0,255,122,0.25);
+  background: rgba(0,255,122,0.06);
+  color: #e8fff0;
+  text-decoration: none;
+  font-size: 17px;
+  transition: transform .2s, box-shadow .2s;
+}
+
+.contact-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0,255,122,0.18);
+}
+</style>
 </head>
 
 <body>
 
+<canvas id="particles"></canvas>
+
 <header class="site-header">
   <div class="container header-inner">
     <a class="logo" href="index.html">RAIZEL<span>TECH</span></a>
+
     <nav class="nav">
       <a href="index.html">Accueil</a>
       <a href="services.html">Services</a>
@@ -24,55 +93,44 @@
   </div>
 </header>
 
-<main class="container main-content">
 
-  <h1 class="page-title">📞 Contact & Assistance</h1>
+<section class="container hero small-hero">
+  <h1>📞 Contactez-nous directement</h1>
+  <p>Support, commandes, devis, partenariat : nous répondons 24h/24.</p>
+</section>
 
-  <p class="intro">
-    Vous avez un projet, une question ou vous souhaitez passer une commande ?  
-    Notre équipe est disponible 7j/7 pour vous assister.
-  </p>
 
-  <section class="contact-section">
+<section class="container">
+  <div class="contact-card">
 
-    <div class="contact-card">
-      <h2>💬 WhatsApp Direct</h2>
-      <p>Contactez-nous instantanément via WhatsApp.</p>
+    <h2>Nos contacts officiels</h2>
 
-      <a href="https://wa.me/679064679?text=Bonjour%20👋,%20j’aimerais%20obtenir%20des%20informations.%20"
-         class="btn-whatsapp">Envoyer un message</a>
+    <p style="color:var(--muted); margin-top:8px; font-size:15px;">
+      Cliquez sur une plateforme pour nous écrire instantanément.
+    </p>
+
+    <div class="contact-methods">
+
+      <!-- WHATSAPP -->
+      <a class="contact-btn" href="https://wa.me/679064679?text=Bonjour%20RAIZEL%20TECH%20!%20Je%20voudrais%20plus%20d'informations.">
+        <span class="icon-whatsapp"></span> WhatsApp Direct
+      </a>
+
+      <!-- TELEGRAM -->
+      <a class="contact-btn" href="https://t.me/DevRaizel">
+        <span class="icon-telegram"></span> Telegram Direct
+      </a>
+
+      <!-- EMAIL -->
+      <a class="contact-btn" href="mailto:contact@raizeltech.com">
+        ✉️ Email Professionnel
+      </a>
+
     </div>
 
-    <div class="contact-card">
-      <h2>📨 Telegram</h2>
-      <p>Disponible également sur Telegram pour les commandes & projets.</p>
+  </div>
+</section>
 
-      <a href="https://t.me/DevRaizel" class="btn-telegram">Ouvrir Telegram</a>
-    </div>
-
-  </section>
-
-
-  <!-- FORMULAIRE OPTIONNEL -->
-  <section class="form-section">
-    <h2>📧 Envoyer un message</h2>
-
-    <form class="contact-form" onsubmit="alert('Message envoyé ! (Démo)'); return false;">
-      
-      <label>Nom</label>
-      <input type="text" placeholder="Votre nom" required>
-
-      <label>Email</label>
-      <input type="email" placeholder="Votre email" required>
-
-      <label>Message</label>
-      <textarea placeholder="Dites-nous en plus..." required></textarea>
-
-      <button type="submit" class="btn-main">Envoyer</button>
-    </form>
-  </section>
-
-</main>
 
 </body>
 </html>
