@@ -1,260 +1,217 @@
-/* ============================================================
-   RAIZEL TECH — main.css complet
-   Design moderne + verre + néon + animations fluides
-   Background animé façon “GIF qui bouge” sur toutes les pages
-============================================================ */
+/* =============================================
+   RAIZEL TECH — MAIN.CSS (VERSION FINALE)
+   Design moderne, animations, ligne verticale
+============================================= */
 
-/* ----------- RESET ---------- */
+/* ---------- VARIABLES ---------- */
+:root {
+    --bg: #0c0c0f;
+    --text: #e5e5e5;
+    --accent: #00e1ff;
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --border: rgba(255, 255, 255, 0.08);
+    --radius: 14px;
+    --shadow: 0 0 15px rgba(0, 225, 255, 0.3);
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+    font-family: "Inter", sans-serif;
 }
 
 body {
-    background: #020c1b;
-    color: #fff;
-    overflow-x: hidden;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
 }
 
-
-/* ============================================================
-   BACKGROUND ANIME (EFFET GIF / VAGUES NEON)
-   ------------------------------------------------------------
-   → Animation légère, immersive
-   → S'applique automatiquement à toutes les pages
-============================================================ */
-
-body::before {
-    content: "";
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%;
-    height: 100%;
-
-    background: radial-gradient(circle at 20% 20%, rgba(0,150,255,0.25), transparent 60%),
-                radial-gradient(circle at 80% 80%, rgba(0,255,170,0.25), transparent 60%),
-                radial-gradient(circle at 50% 50%, rgba(0,140,255,0.15), transparent 70%);
-
-    animation: bgMove 18s infinite linear;
-    z-index: -1;
-    filter: blur(60px);
+/* ---------- GLOBAL CONTAINERS ---------- */
+.container {
+    width: 92%;
+    max-width: 1100px;
+    margin: auto;
 }
 
-/* Animation mouvement lent */
-@keyframes bgMove {
-    0% { transform: translate(0, 0) scale(1); }
-    50% { transform: translate(30px, 40px) scale(1.05); }
-    100% { transform: translate(0, 0) scale(1); }
+/* ---------- HEADER ---------- */
+.site-header {
+    padding: 18px 0;
+    border-bottom: 1px solid var(--border);
+    background: rgba(12, 12, 15, 0.75);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
-
-/* ============================================================
-   VARIABLES THEME
-============================================================ */
-:root {
-    --accent: #00eaff;
-    --accent-dark: #00bcd4;
-    --glass: rgba(255, 255, 255, 0.07);
-    --glass-strong: rgba(255, 255, 255, 0.12);
-    --radius: 14px;
-    --muted: #cbd5e1;
-}
-
-
-/* ============================================================
-   HEADER / NAVIGATION
-============================================================ */
-
-header {
-    width: 100%;
-    padding: 18px 40px;
+.header-inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(0, 0, 0, 0.35);
-    backdrop-filter: blur(10px);
-    position: fixed;
-    top: 0; left: 0;
-    z-index: 1000;
 }
 
 .logo {
-    font-size: 1.7rem;
-    font-weight: bold;
-    color: var(--accent);
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--text);
 }
 
-.nav {
-    display: flex;
-    gap: 25px;
+.logo span {
+    color: var(--accent);
 }
 
 .nav a {
-    color: #fff;
-    font-size: 1.05rem;
+    margin-left: 25px;
+    color: var(--text);
+    opacity: 0.8;
     transition: 0.3s;
 }
 
-.nav a:hover {
+.nav a:hover,
+.nav a.active {
+    opacity: 1;
     color: var(--accent);
 }
 
-/* HAMBURGER */
-.hamburger {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
+.btn-contact {
+    padding: 7px 14px;
+    border: 1px solid var(--accent);
+    border-radius: var(--radius);
+    transition: 0.3s;
 }
 
-.hamburger span {
-    width: 26px;
-    height: 3px;
-    background: #fff;
+.btn-contact:hover {
+    background: var(--accent);
+    color: #000;
 }
 
-/* MOBILE NAV */
-@media(max-width: 760px) {
-    .hamburger { display: flex; }
+/* ---------- HERO ---------- */
+.hero {
+    padding: 100px 0 70px;
+    text-align: center;
+}
 
+.hero h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: var(--accent);
+}
+
+.hero p {
+    max-width: 700px;
+    margin: auto;
+    opacity: 0.85;
+    margin-bottom: 35px;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* ---------- BUTTONS ---------- */
+.btn-main,
+.btn-whatsapp,
+.btn-telegram {
+    padding: 12px 20px;
+    border-radius: var(--radius);
+    font-weight: 600;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.btn-main {
+    background: var(--accent);
+    color: #000;
+}
+
+.btn-main:hover {
+    box-shadow: var(--shadow);
+}
+
+.btn-whatsapp {
+    background: #25D366;
+    color: #000;
+}
+
+.btn-whatsapp:hover {
+    opacity: 0.85;
+}
+
+.btn-telegram {
+    background: #0088cc;
+    color: #fff;
+}
+
+.btn-telegram:hover {
+    opacity: 0.85;
+}
+
+/* ---------- LIGNE VERTICALE ANIMÉE ---------- */
+.vertical-line {
+    width: 3px;
+    height: 120px;
+    background: linear-gradient(to bottom, transparent, var(--accent), transparent);
+    margin: 25px auto;
+    border-radius: 20px;
+    animation: pulseLine 3s infinite ease-in-out;
+}
+
+@keyframes pulseLine {
+    0% { opacity: .4; transform: scaleY(0.9); }
+    50% { opacity: 1; transform: scaleY(1); }
+    100% { opacity: .4; transform: scaleY(0.9); }
+}
+
+/* ---------- CATEGORY CARDS ---------- */
+.categories {
+    margin-top: 60px;
+}
+
+.categories h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--accent);
+}
+
+.categories-grid {
+    display: grid;
+    gap: 20px;
+}
+
+.category-card {
+    padding: 25px;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    transition: 0.3s;
+    display: block;
+}
+
+.category-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow);
+}
+
+/* ---------- CONTACT ---------- */
+.contact-shortcut {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
     .nav {
-        position: absolute;
-        top: 70px;
-        right: 0;
-        width: 200px;
-        flex-direction: column;
-        background: rgba(0,0,0,0.55);
-        backdrop-filter: blur(12px);
-        padding: 18px;
-        border-radius: var(--radius);
         display: none;
     }
-
-    .nav.nav-open { display: flex; }
-}
-
-
-/* ============================================================
-   TITRES DE PAGE
-============================================================ */
-.page-title {
-    margin-top: 120px;
-    font-size: 2.4rem;
-    text-align: center;
-    color: var(--accent);
-    text-shadow: 0 0 18px rgba(0, 234, 255, 0.6);
-}
-
-
-/* ============================================================
-   SECTIONS
-============================================================ */
-.service-section {
-    padding: 50px 5%;
-}
-
-.service-section h2 {
-    font-size: 1.9rem;
-    margin-bottom: 25px;
-    color: var(--accent);
-    text-align: center;
-}
-
-
-/* ============================================================
-   CARTES DE SERVICE
-============================================================ */
-.service-card {
-    background: var(--glass);
-    border: 1px solid rgba(255,255,255,0.08);
-    border-radius: var(--radius);
-    padding: 25px;
-    margin-bottom: 25px;
-    backdrop-filter: blur(15px);
-    transition: 0.35s;
-    box-shadow: 0 0 20px rgba(0, 255, 255, 0.07);
-    opacity: 0;
-    transform: translateY(18px);
-}
-
-.service-card h3 {
-    font-size: 1.4rem;
-    margin-bottom: 10px;
-}
-
-.service-card p {
-    color: var(--muted);
-    margin-bottom: 12px;
-}
-
-.service-card:hover {
-    transform: translateY(-4px);
-    background: var(--glass-strong);
-    box-shadow: 0 0 30px rgba(0, 255, 255, 0.13);
-}
-
-
-/* ============================================================
-   BOUTONS
-============================================================ */
-.btn-order {
-    display: inline-block;
-    background: var(--accent);
-    padding: 10px 18px;
-    border-radius: var(--radius);
-    color: #000;
-    transition: 0.3s;
-}
-
-.btn-order:hover {
-    background: white;
-}
-
-
-/* ============================================================
-   DOWNLOADS (MEDIAFIRE)
-============================================================ */
-.downloads {
-    margin-top: 15px;
-    padding-top: 12px;
-    border-top: 1px solid rgba(255,255,255,0.09);
-}
-
-.downloads h4 {
-    margin-bottom: 6px;
-    color: var(--muted);
-}
-
-.download-link {
-    display: block;
-    padding: 10px 12px;
-    border-radius: var(--radius);
-    background: var(--glass);
-    margin-bottom: 10px;
-    transition: 0.3s;
-}
-
-.download-link:hover {
-    background: var(--accent);
-    color: #000;
-}
-
-
-/* ============================================================
-   ICONES CONTACT (WhatsApp / Telegram)
-============================================================ */
-
-.contact-icon img {
-    width: 40px;
-    height: 40px;
-    margin-top: 8px;
-    opacity: 0.8;
-    transition: 0.25s;
-}
-
-.contact-icon img:hover {
-    opacity: 1;
-    transform: scale(1.1);
 }
